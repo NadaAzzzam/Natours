@@ -1,0 +1,41 @@
+
+
+*,
+*::after,
+*::before
+    {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    overflow-x: hidden;
+    font-size: 62.5%; /*(10/16px)*100 (rem)for G FS */
+    
+ 
+    @include respond(tab-land){
+        font-size: 56.25%;/*(9/16px)*100 (rem)for G FS */
+    } 
+        @include respond(tab-port){
+            font-size: 50%;/*(8/16px)*100 (rem)for G FS */
+        }
+        
+        @include respond(big-desktop){
+            font-size: 75%;/*(12/16px)*100 (rem)for G FS */
+        }
+    }
+
+    body {
+        box-sizing: border-box;
+        overflow-x: hidden;
+        padding: 3rem;
+        @include respond(tab-port){
+            padding: 0;
+        }
+
+}
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
